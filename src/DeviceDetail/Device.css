@@ -1,0 +1,124 @@
+.slider {
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    position: relative;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    animation: fade 0.8s ease-in-out;
+  }
+  
+  @keyframes fade {
+    from { opacity: 0.3; }
+    to { opacity: 1; }
+  }
+  
+  .slide {
+    display: none;
+  }
+  
+  .slide.active {
+    display: block;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
+    border: none;
+    border-radius: 50%;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+    z-index: 2;
+    transition: background 0.3s;
+  }
+  
+  .arrow:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .left {
+    left: 20px;
+  }
+  
+  .right {
+    right: 20px;
+  }
+  
+  .dots {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.4s;
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: #333;
+  }
+
+  .content-section {
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  
+  .content-section h1,
+  .content-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .content-section p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+
+  .cta-button {
+    margin-top: 20px;
+    background-color: #0077ff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #005fcc;
+  }
+  
+  @media (max-width: 768px) {
+    .arrow {
+      font-size: 1.5rem;
+      padding: 0.3rem 0.5rem;
+    }
+  }
+  

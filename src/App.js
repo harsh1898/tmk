@@ -1,23 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Landing from './Landing/Landing';
+import Device from './DeviceDetail/Device';
+import Product from './Product/Product';
+import Price from './Price/Price';
+import Unknown from './Unknown/Unknown';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
-function App() {
+
+const App=() =>{
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: false,
+    });
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <BrowserRouter>
+       <Routes>
+       <Route path="/" element={<Landing />} />
+       <Route path="*" element={< Unknown/>} />
+       <Route path="/water-controller" element={<Device />} />
+       <Route path="/product" element={<Product />} />
+       <Route path="/price" element={<Price />} />
+     </Routes>
+     </BrowserRouter>
     </div>
   );
 }
