@@ -1,5 +1,5 @@
 import WaterDevice from '../img/WaterDevice-removebg-preview.png';
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Herosection = () => {
   const navigate = useNavigate();

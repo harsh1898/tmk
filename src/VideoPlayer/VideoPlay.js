@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import VP from '../video/Demo.mp4';
 import './VideoPlay.css';
 
